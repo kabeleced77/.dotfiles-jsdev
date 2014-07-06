@@ -1,12 +1,19 @@
 .dotfiles
 =========
 
-Creates basic dotfiles like .bashrc or .vimrc in the home directory.
+Provides basic dotfiles for
+
+- bash
+- vim
+- tmux
+- top
+- git
 
 Requirements:
 -------------
 - git client
 - rcm for dotfile management
+- vim-7.3+ with activated Python support
 
 Installation
 ------------
@@ -19,3 +26,13 @@ Installation
                the rcm configuration file ~/.rcrc is not used.
                --> will be created by the pre-up hook when rcup is run.
   + run rcup to create dotfiles based on this repository
+
+- Vim configuration
+  + run ~/.vim/sync-bundles.sh to prepare vim using vundle - could take a while
+
+  + install YCM - YouCompleteMe - short:
+    cd ~/.vim/bundle/YouCompleteMe
+    ./install.sh --clang-completer
+
+    for more see doc of this bundle
+    
