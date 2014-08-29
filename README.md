@@ -12,7 +12,7 @@ Provides basic dotfiles for
 Requirements:
 -------------
 - git client to check this repository out
-- rcm for dotfile management creates the links to this repository
+- rcm for dotfile management creates the links to this repository (https://github.com/thoughtbot/rcm)
 - vim-7.3+ with activated Python support to use all the JavaScript bundles configured
 - cmake to build a tmux cpu-stats plugin
 
