@@ -46,12 +46,19 @@ Installation
   tmux-conifg itself has also a submodule which can be loaded
 
     ``cd ~/.dotfiles/gitsubmodules/tmux-config``
+    
     ``git submodule init``
+    
     ``git submodule update``
+    
     ``cd vendor/tmux-mem-cpu-load``
+    
     ``cmake .``
+    
     ``make``
+    
     ``sudo make install``
+    
 
   run tmux and enjoy
 
