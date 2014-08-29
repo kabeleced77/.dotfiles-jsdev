@@ -34,7 +34,7 @@ Installation
     rcup
 
 - tmux configuration
-  tmux is configured through 'tmux-configu' a submodule
+  tmux itself is configured through the submodule 'tmux-config'
 
     cd ~/.dotfiles
   
