@@ -77,9 +77,9 @@ Installation
 
   + install YCM - YouCompleteMe - short:
 
-  ```
+  ```  
     cd ~/.vim/bundle/YouCompleteMe
     ./install.sh --clang-completer
-  ```
+  ```  
 
     for more see doc of that bundle
