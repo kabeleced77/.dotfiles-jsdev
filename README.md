@@ -21,9 +21,9 @@ Installation
 ------------
 - clone this repository to your home: ``~/.dotfiles``
 
-  ```
-git clone https://github.com/kabeleced77/.dotfiles.git ~/.dotfiles
-  ```
+  ```  
+  git clone https://github.com/kabeleced77/.dotfiles.git ~/.dotfiles  
+  ```  
 
   ATTENTION: This name and location of the cloned repository is required as the pre-up hook for ``rcup`` is using it via a magic string (hard coded).  
 
@@ -34,30 +34,35 @@ git clone https://github.com/kabeleced77/.dotfiles.git ~/.dotfiles
       --> will be created by the pre-up hook when rcup is run.  
   + run ``rcup`` to create dotfiles based on this repository
 
-- ``tmux`` itself is configured through the submodule ``tmux-config``
+- load submodules of this repository
 
-```
-    cd ~/.dotfiles
 
-    git submodule init
+  ```  
+  cd ~/.dotfiles
 
-    git submodule update
-```
-  ``tmux-conifg`` itself has also a submodule which can be loaded
+  git submodule init
 
-```
-cd ~/.dotfiles/gitsubmodules/tmux-config
+  git submodule update
+  ```  
 
-git submodule init
+- ``tmux`` is configured through submodule ``tmux-conifg`` which itself has also a submodule which can be loaded
 
-git submodule update
 
-cd vendor/tmux-mem-cpu-load
+  ```..
+  cd ~/.dotfiles/gitsubmodules/tmux-config
 
-cmake .
-make
-sudo make install
-```
+  git submodule init
+
+  git submodule update
+
+  cd vendor/tmux-mem-cpu-load
+
+  cmake .
+
+  make
+
+  sudo make install
+  ```..
 
   run ``tmux`` and enjoy
 
