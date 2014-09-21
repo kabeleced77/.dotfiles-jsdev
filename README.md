@@ -48,7 +48,7 @@ Installation
 - ``tmux`` is configured through submodule ``tmux-conifg`` which itself has also a submodule which can be loaded
 
 
-  ```..
+  ```  
   cd ~/.dotfiles/gitsubmodules/tmux-config
 
   git submodule init
@@ -62,22 +62,24 @@ Installation
   make
 
   sudo make install
-  ```..
+  ```  
 
   run ``tmux`` and enjoy
 
 - ``vim`` configuration
   + run ``~/.vim/sync-bundles.sh`` to prepare ``vim`` using ``vundle`` - could take a while
 
-```
+  ```
     cd ~/.vim
+
     ./sync-bundles.sh
-```
+  ```
 
   + install YCM - YouCompleteMe - short:
-```
+
+  ```
     cd ~/.vim/bundle/YouCompleteMe
     ./install.sh --clang-completer
-```
+  ```
 
     for more see doc of that bundle
