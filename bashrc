@@ -1,6 +1,8 @@
 # Add binaries into the path
-PATH=~/programs/bin:~/.dotfiles/bin:$PATH
+PATH=/opt/bin:$PATH
 export PATH
+
+alias vi='/opt/bin/vim'
 
 # Source all files in ~/.dotfiles/source/
 function src() {
@@ -13,9 +15,3 @@ function src() {
     done
   fi
 }
-
-# Run dotfiles script, then source.
-function dotfiles() {
-  ~/.dotfiles/bin/dotfiles "$@" && src
-}
-src
