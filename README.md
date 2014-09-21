@@ -22,7 +22,7 @@ Installation
 - clone this repository to your home: ``~/.dotfiles``
 
   ```
-  git clone https://github.com/kabeleced77/.dotfiles.git ~/.dotfiles
+git clone https://github.com/kabeleced77/.dotfiles.git ~/.dotfiles
   ```
 
   ATTENTION: This name and location of the cloned repository is required as the pre-up hook for ``rcup`` is using it via a magic string (hard coded).  
