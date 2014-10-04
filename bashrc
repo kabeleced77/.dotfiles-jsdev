@@ -8,10 +8,14 @@ alias vi='/opt/bin/vim'
 function src() {
   local file
   if [[ "$1" ]]; then
+    echo "source $1"
     source "$HOME/.dotfiles/source/$1.sh"
   else
+    echo "source files"
     for file in ~/.dotfiles/source/*; do
       source "$file"
     done
   fi
 }
+
+src
