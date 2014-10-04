@@ -16,6 +16,28 @@ Requirements:
   --> creates links of the dotfiles to the checked out repository
 - ``vim`` (7.3+) with activated Python support to use all the JavaScript bundles configured
 - ``cmake`` to build a ``tmux`` cpu-stats plugin
+- ``nodejs/npm`` to run install and updates of the ``vim`` plugin ``tern_for_vim``
+  --> Try your package manager or install from sources - following the HOWTO for Debian:
+
+  Preparation - get required building tools:
+  ```  
+  apt-get update
+  apt-get install g++ curl libssl-dev
+  ```  
+
+  Get latest source code:
+  ```  
+  wget http://nodejs.org/dist/node-latest.tar.gz
+  tar -xzvf node-latest.tar.gz
+  cd node-v[VERSION]
+  ```  
+
+  Configure, compile and install - install must be done as user ``root`` if the installation shall be done into the system path - default:
+  ```  
+  ./configure
+  make
+  make install
+  ```  
 
 Installation
 ------------
