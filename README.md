@@ -69,6 +69,8 @@ Installation
 
 - ``tmux`` is configured through submodule ``tmux-conifg`` which itself has also a submodule which can be loaded
 
+  HINT: Only required once per system as it is installed system wide.
+
 
   ```  
   cd ~/.dotfiles/gitsubmodules/tmux-config
@@ -91,6 +93,8 @@ Installation
 - ``vim`` configuration
   + run ``~/.vim/sync-bundles.sh`` to prepare ``vim`` using ``vundle`` - could take a while
 
+  HINT: Errors regarding missing of misconfigured ``vim`` plugins can be ignored here as they will be installed/configured in this step.
+
   ```
     cd ~/.vim
 
@@ -101,7 +105,10 @@ Installation
 
   ```  
     cd ~/.vim/bundle/YouCompleteMe
-    ./install.sh --clang-completer
   ```  
 
-    for more see doc of that bundle
+  Run ``install.sh`` with option ``--clang-completer`` if you want to have support for C/C++/Objective-C/Objective-C++ otherwise without is enough. For more information or problems see YCM docs:
+
+  ```  
+    ./install.sh
+  ```  
