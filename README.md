@@ -14,7 +14,30 @@ Requirements:
 - ``git`` client to check this repository out
 - ``rcm`` (https://github.com/thoughtbot/rcm) for dotfile management
   --> creates links of the dotfiles to the checked out repository
-- ``vim`` (7.3+) with activated Python support to use all the JavaScript bundles configured
+- ``vim`` (7.3+) with activated Python support to use all the JavaScript bundles configured. Usually standard ``vim`` packages are build witout Python support - but it's very easy to install ``vim`` from sources.
+
+  Requirements for ``vim`` to build from sources (for Debian):
+  ``python-dev`` and ``ncurseslib-dev`` must be available
+  ```  
+  apt-get install python-dev ncurseslib[version]-dev
+  wget [URL-to-latest-source-code-version]
+  ```  
+
+  Configure ``vim`` source code
+  ``--prefix`` where to be installed to, ``/opt/bin`` is assumed in later installed scripts
+  ``--with-feature`` based on your taste and required ``vim`` features
+  ``--enable-pythoninterp=yes`` required for many of the later installed plugins
+  ``--with-python-conig-dir`` path containing Python config files, e.g. ``/usr/lib/python2.7/config``
+  ```  
+  ./configure --prefix=/opt/bin --with-features=huge --enable-pythoninterp=yes --with-python-config-dir=[Path-to-Ptyhon-config-dir]
+  ```  
+
+  Build and install (root privileges required) ``vim``
+  ```  
+  make
+  make install
+  ```  
+
 - ``cmake`` to build a ``tmux`` cpu-stats plugin
 - ``nodejs/npm`` to run install and updates of the ``vim`` plugin ``tern_for_vim``
   --> Try your package manager or install from sources - following the HOWTO for Debian:
@@ -93,7 +116,7 @@ Installation
 - ``vim`` configuration
   + run ``~/.vim/sync-bundles.sh`` to prepare ``vim`` using ``vundle`` - could take a while
 
-  HINT: Errors regarding missing of misconfigured ``vim`` plugins can be ignored here as they will be installed/configured in this step.
+    HINT: Errors regarding missing of misconfigured ``vim`` plugins can be ignored here as they will be installed/configured in this step.
 
   ```
     cd ~/.vim
@@ -107,7 +130,7 @@ Installation
     cd ~/.vim/bundle/YouCompleteMe
   ```  
 
-  Run ``install.sh`` with option ``--clang-completer`` if you want to have support for C/C++/Objective-C/Objective-C++ otherwise without is enough. For more information or problems see YCM docs:
+    Run ``install.sh`` with option ``--clang-completer`` if you want to have support for C/C++/Objective-C/Objective-C++ otherwise without is enough. For more information or problems see YCM docs:
 
   ```  
     ./install.sh
